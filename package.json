@@ -1,0 +1,108 @@
+{
+  "name": "@contentpi/ui",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "sandbox": "webpack-dev-server --config webpack.sandbox.config.ts",
+    "clean": "rm -rf ./dist",
+    "build:dev": "npm run clean && webpack -w -d --config webpack.config.ts",
+    "build": "npm run clean && NODE_ENV=production webpack --config webpack.config.ts",
+    "lint": "eslint --ext .tsx,.ts src",
+    "lint:fix": "eslint --ext .tsx,.ts --fix src",
+    "test": "jest --no-cache --maxWorkers=4",
+    "test:verbose": "jest --verbose --no-cache --maxWorkers=4",
+    "test:watch": "jest --watch",
+    "test:watchAll": "jest --watchAll",
+    "test:coverage": "jest --coverage",
+    "prepublish": "npm run lint && npm run build"
+  },
+  "author": "Carlos Santana",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ContentPI/ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ContentPI/ui/issues"
+  },
+  "homepage": "https://github.com/ContentPI/ui#readme",
+  "files": [
+    "dist/"
+  ],
+  "license": "MIT",
+  "jest": {
+    "setupFilesAfterEnv": [
+      "<rootDir>/config/jest/setupTestFramework.js"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}"
+    ],
+    "moduleNameMapper": {
+      "^.+\\.(scss)$": "identity-obj-proxy"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run lint"
+    }
+  },
+  "dependencies": {
+    "@babel/preset-env": "7.12.1",
+    "@babel/preset-react": "7.12.1",
+    "@babel/runtime": "^7.12.1",
+    "@emotion/core": "^10.0.35",
+    "@emotion/styled": "^10.0.27",
+    "@types/jest": "26.0.15",
+    "@types/node": "14.14.6",
+    "@types/react": "^16.9.55",
+    "@types/react-dom": "^16.9.9",
+    "@types/slug": "^0.9.1",
+    "babel-eslint": "10.1.0",
+    "babel-loader": "8.1.0",
+    "babel7-jest": "1.0.1",
+    "classnames": "2.2.6",
+    "cross-env": "7.0.2",
+    "css-loader": "5.0.0",
+    "emotion": "^10.0.27",
+    "enzyme": "3.11.0",
+    "enzyme-adapter-react-16": "1.15.5",
+    "eslint": "7.12.1",
+    "eslint-config-airbnb": "18.2.0",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-jsx-a11y": "6.4.1",
+    "eslint-plugin-react": "7.21.5",
+    "fogg-utils": "^2.7.5",
+    "html-webpack-plugin": "4.5.0",
+    "husky": "4.3.0",
+    "jest": "26.6.1",
+    "mini-css-extract-plugin": "1.2.1",
+    "moment": "2.29.1",
+    "node-sass": "4.14.1",
+    "sass-loader": "10.0.4",
+    "slug": "4.0.1",
+    "webpack": "4.44.2",
+    "webpack-cli": "3.3.12"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.1",
+    "react-dom": ">=17.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/plugin-transform-runtime": "^7.12.1",
+    "@typescript-eslint/eslint-plugin": "^4.6.0",
+    "@typescript-eslint/parser": "4.6.0",
+    "babel-plugin-styled-components": "1.11.1",
+    "eslint-config-prettier": "6.15.0",
+    "eslint-plugin-prettier": "3.1.4",
+    "file-loader": "6.2.0",
+    "prettier": "2.1.2",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "svg-inline-loader": "^0.8.2",
+    "svg-url-loader": "6.0.0",
+    "ts-jest": "26.4.3",
+    "ts-loader": "8.0.7",
+    "typescript": "^4.0.5",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
