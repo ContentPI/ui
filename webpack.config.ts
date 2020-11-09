@@ -53,7 +53,7 @@ module.exports = {
     },
     slug: 'slug',
     moment: 'moment',
-    'fogg-utils': 'fogg-utils',
+    '@contentpi/utils': '@contentpi/utils',
     emotion: 'emotion',
     '@emotion/core': '@emotion/core',
     '@emotion/styled': '@emotion/styled'
