@@ -1,7 +1,7 @@
 import React, { FC, ReactElement, Fragment, useState, useMemo, useEffect } from 'react'
 import styled from '@emotion/styled'
 import moment from 'moment'
-import { cx, getFileExtensionFromURL, pluralify, getCurrentLanguage } from 'fogg-utils'
+import { cx, getFileExtensionFromURL, pluralify, getCurrentLanguage } from '@contentpi/utils'
 import Icon from '../Icon'
 import Modal from '../Modal'
 

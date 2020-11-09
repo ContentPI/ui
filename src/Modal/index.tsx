@@ -1,7 +1,7 @@
 import React, { FC, ReactElement } from 'react'
 import styled from '@emotion/styled'
 import { Global, css } from '@emotion/core'
-import { getCurrentLanguage } from 'fogg-utils'
+import { getCurrentLanguage } from '@contentpi/utils'
 
 const currentLanguage = getCurrentLanguage()
 

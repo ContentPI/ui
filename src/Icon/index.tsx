@@ -1,6 +1,6 @@
 // Dependencies
 import React, { FC, ReactElement } from 'react'
-import { cx } from 'fogg-utils'
+import { cx } from '@contentpi/utils'
 
 interface iProps {
   children?: ReactElement | string

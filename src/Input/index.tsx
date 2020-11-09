@@ -2,7 +2,7 @@
 import React, { FC } from 'react'
 import styled from '@emotion/styled'
 import { Global, css } from '@emotion/core'
-import { cx } from 'fogg-utils'
+import { cx } from '@contentpi/utils'
 
 interface iProps {
   autoComplete?: string
