@@ -55,6 +55,12 @@ const panels = [
 ]
 
 const tableData = {
+  pagination: {
+    design: 'primary',
+    page: 2,
+    total: 100,
+    href: '/page/'
+  },
   head: ['ID', 'Key', 'Value', 'Language'],
   body: ['id', 'key', 'value', 'language'],
   raw,

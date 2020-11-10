@@ -4,6 +4,17 @@ import moment from 'moment'
 import { cx, getFileExtensionFromURL, pluralify, getCurrentLanguage } from '@contentpi/utils'
 import Icon from '../Icon'
 import Modal from '../Modal'
+import Pagination, { iProps as iPaginationProps } from '../Pagination'
+
+type tData = {
+  head: string[]
+  body: string[]
+  rows: any[]
+  raw: any[]
+  isFile?: boolean
+  fileTypes: any
+  pagination: iPaginationProps
+}
 
 interface iProps {
   className?: string
@@ -13,14 +24,7 @@ interface iProps {
   url: string
   query?: string
   t?: any
-  data: {
-    head: string[]
-    body: string[]
-    rows: any[]
-    raw: any[]
-    isFile?: boolean
-    fileTypes: any
-  }
+  data: tData
 }
 
 const language = getCurrentLanguage()
@@ -482,7 +486,7 @@ const Table: FC<iProps> = ({
     images: ['png', 'jpg', 'jpeg', 'gif'],
     videos: ['mp4']
   }
-  const { head, body, rows = [], raw = [], isFile, fileTypes = defaultFileTypes } = data
+  const { head, body, rows = [], raw = [], isFile, fileTypes = defaultFileTypes, pagination } = data
 
   const [allCheckboxes, setAllCheckboxes] = useState(false)
   const [isOpen, handleIsOpen] = useState(false)
@@ -969,6 +973,8 @@ const Table: FC<iProps> = ({
             })}
         </tbody>
       </StyledTable>
+
+      {pagination && !currentSearch && <Pagination {...pagination} />}
     </>
   )
 }

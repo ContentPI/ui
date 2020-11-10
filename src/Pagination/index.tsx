@@ -8,7 +8,7 @@ import colors from '../colors'
 // Components
 import Icon from '../Icon'
 
-interface iProps {
+export interface iProps {
   page: number
   total: number
   rowsPerPage?: number
