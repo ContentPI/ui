@@ -4,7 +4,17 @@ import moment from 'moment'
 import { cx, getFileExtensionFromURL, pluralify, getCurrentLanguage } from '@contentpi/utils'
 import Icon from '../Icon'
 import Modal from '../Modal'
-import Pagination from '../Pagination'
+import Pagination, { iProps as iPaginationProps } from '../Pagination'
+
+type tData = {
+  head: string[]
+  body: string[]
+  rows: any[]
+  raw: any[]
+  isFile?: boolean
+  fileTypes: any
+  pagination: iPaginationProps
+}
 
 interface iProps {
   className?: string
@@ -14,23 +24,7 @@ interface iProps {
   url: string
   query?: string
   t?: any
-  data: {
-    head: string[]
-    body: string[]
-    rows: any[]
-    raw: any[]
-    isFile?: boolean
-    fileTypes: any
-    pagination: {
-      design: string
-      page: number
-      total: number
-      rowsPerPage: number
-      href: string
-      as: string
-      Link: any
-    }
-  }
+  data: tData
 }
 
 const language = getCurrentLanguage()
