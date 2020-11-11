@@ -722,7 +722,7 @@ const Table: FC<iProps> = ({
         </thead>
 
         <tbody>
-          {showItems && showItems.length === 0 && (
+          {showItems && showItems.length === 0 && rows.length > 0 && (
             <tr>
               <td colSpan={head.length + 1} style={{ textAlign: 'center' }}>
                 {t('No results')}
