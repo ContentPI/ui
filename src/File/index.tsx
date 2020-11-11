@@ -1,7 +1,7 @@
 // Dependencies
 import React, { FC, Fragment } from 'react'
 import styled from '@emotion/styled'
-import { getFileInfo, bytesToSize } from '@contentpi/utils'
+import { getFileInfo, bytesToSize } from '@contentpi/core'
 
 // Components
 import Icon from '../Icon'
