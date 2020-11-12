@@ -56,7 +56,8 @@ module.exports = {
     '@contentpi/utils': '@contentpi/utils',
     emotion: 'emotion',
     '@emotion/core': '@emotion/core',
-    '@emotion/styled': '@emotion/styled'
+    '@emotion/styled': '@emotion/styled',
+    'isomorphic-fetch': 'isomorphic-fetch'
   },
   devtool: devMode ? 'source-map' : '',
   mode: devMode ? 'development' : 'production'
