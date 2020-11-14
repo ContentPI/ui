@@ -1,7 +1,7 @@
 // Dependencies
 import React, { FC } from 'react'
 import styled from '@emotion/styled'
-import { Global, css } from '@emotion/core'
+import { Global, css } from '@emotion/react'
 import { cx } from '@contentpi/utils'
 
 interface iProps {

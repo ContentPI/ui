@@ -1,6 +1,6 @@
 import React, { FC, ReactElement } from 'react'
 import styled from '@emotion/styled'
-import { Global, css } from '@emotion/core'
+import { Global, css } from '@emotion/react'
 import { getCurrentLanguage } from '@contentpi/core'
 
 const currentLanguage = getCurrentLanguage()
