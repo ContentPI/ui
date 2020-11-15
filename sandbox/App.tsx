@@ -7,6 +7,7 @@ import Accordion from '../src/Accordion'
 import EntryBlock from '../src/EntryBlock'
 import Badge from '../src/Badge'
 import File from '../src/File'
+import Button from '../src/Button'
 import LinkButton from '../src/Button/Link'
 import DangerButton from '../src/Button/Danger'
 import DarkButton from '../src/Button/Dark'
@@ -386,6 +387,9 @@ class App extends Component {
           />
           <h2>Buttons</h2>
           <h3>Button with Spinner</h3>
+          <p>
+            <Button />
+          </p>
           <p>
             <DarkButton
               onClick={this.handleLoadingClick}
