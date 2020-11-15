@@ -1,5 +1,4 @@
 const path = require('path')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 const webpack = require('webpack')
 
@@ -19,22 +18,6 @@ module.exports = {
         loader: 'svg-url-loader'
       },
       {
-        test: /\.s?[ac]ss$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          {
-            loader: 'css-loader',
-            options: {
-              modules: {
-                localIdentName: '[name]_[local]_[hash:base64]'
-              },
-              sourceMap: true
-            }
-          },
-          'sass-loader'
-        ]
-      },
-      {
         test: /\.(tsx|ts)$/,
         exclude: /node_modules/,
         use: 'ts-loader'
@@ -42,7 +25,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['*', '.ts', '.tsx', '.scss', '.js', '.jsx', '.svg']
+    extensions: ['*', '.ts', '.tsx', '.js', '.jsx', '.svg']
   },
   devtool: devMode ? 'source-map' : '',
   plugins: [
@@ -51,9 +34,6 @@ module.exports = {
       title: 'Sandbox',
       template: './sandbox/index.html',
       filename: './index.html'
-    }),
-    new MiniCssExtractPlugin({
-      filename: 'style.css'
     })
   ],
   mode: devMode ? 'development' : 'production'
