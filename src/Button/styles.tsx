@@ -1,30 +1,4 @@
 import { css } from '@emotion/react'
-import styled from '@emotion/styled'
-
-const ButtonBase = styled.button`
-  user-select: none;
-  border: 1px solid transparent;
-
-  color: #fff;
-  background-color: #0fac81;
-  border-color: #0fac81;
-
-  font-weight: 700;
-
-  text-align: center;
-  vertical-align: middle;
-
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-
-  &:not(:disabled) {
-    cursor: pointer;
-  }
-  &:disabled {
-    pointer-events: none;
-    opacity: 0.5;
-  }
-`
 
 const buttonSizes = {
   sm: css`
@@ -86,4 +60,5 @@ const buttonVariants = {
     }
   `
 }
-export { ButtonBase, buttonSizes, buttonVariants }
+
+export { buttonSizes, buttonVariants }
