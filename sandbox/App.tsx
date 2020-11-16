@@ -1,5 +1,8 @@
 // Dependencies
 import React, { Component, ReactElement } from 'react'
+
+import styled from '@emotion/styled'
+
 // Components
 import Alert from '../src/Alert'
 import Accordion from '../src/Accordion'
@@ -33,7 +36,29 @@ import Menu from '../src/Menu'
 
 import raw from './raw'
 
-import styles from './App.scss'
+const StyledApp = styled.div`
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1rem;
+  background-color: #fff;
+  margin: 0 auto;
+  padding-bottom: 500px;
+  width: 95%;
+
+  h1 {
+    text-align: center;
+  }
+
+  button {
+    margin-right: 5px;
+  }
+
+  .spinners {
+    display: flex;
+    justify-content: space-between;
+    background: #34495e;
+    padding: 20px;
+  }
+`
 
 const panels = [
   {
@@ -224,7 +249,7 @@ class App extends Component {
     const { clicked, text } = this.state
 
     return (
-      <div className={styles.App}>
+      <StyledApp>
         <div>
           <h1>@contentpi/ui</h1>
           <h2>Block</h2>
@@ -666,7 +691,7 @@ class App extends Component {
           <h3>Dark Theme</h3>
           <Pagination design="dark" page={10} total={100} href="/page/" />
           <h2>Spinners</h2>
-          <div className={styles.spinners}>
+          <div className="spinners">
             <Spinner spinner="audio" style={{ width: '30px' }} />{' '}
             <Spinner spinner="ball-triangle" style={{ width: '30px' }} />{' '}
             <Spinner spinner="bars" style={{ width: '30px' }} />
@@ -682,7 +707,7 @@ class App extends Component {
           <h2>Placeholder</h2>
           <Placeholder />
         </div>
-      </div>
+      </StyledApp>
     )
   }
 }
