@@ -46,6 +46,6 @@
     "src/TextCounter/index.tsx",
     "src/Toggle/index.tsx"
   ],
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules", "**/__tests__/*"]
 }
