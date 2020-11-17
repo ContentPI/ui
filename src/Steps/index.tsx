@@ -158,7 +158,10 @@ const Steps: FC<iProps> = ({ steps, color = '#2ea1f8' }): ReactElement => {
   return (
     <StyledSteps color={color}>
       {steps.map((step: tStep, i: number) => (
-        <li className={`item ${step.done ? 'done' : ''} ${totalSteps === i + 1 ? 'last' : ''}`}>
+        <li
+          key={`step-${i}`}
+          className={`item ${step.done ? 'done' : ''} ${totalSteps === i + 1 ? 'last' : ''}`}
+        >
           <a href={step.href} title={step.step}>
             <div>
               <strong>{step.step}</strong>
