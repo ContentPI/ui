@@ -39,6 +39,7 @@
     "src/RenderIf/index.tsx",
     "src/Retina/index.tsx",
     "src/Select/index.tsx",
+    "src/Steps/index.tsx",
     "src/Spinner/index.tsx",
     "src/Table/index.tsx",
     "src/Tags/index.tsx",
