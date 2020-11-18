@@ -9,7 +9,7 @@ interface Props extends React.ComponentPropsWithoutRef<'button'> {
 
 const Button: React.FC<Props> = props => {
   const { children, size = 'md', variant = 'contained', ...btnProps } = props
-  let classNames = classNamesGenerator({
+  const classNames = classNamesGenerator({
     ccn: COMPONENT_CLASS_NAME,
     data: [size, variant]
   })

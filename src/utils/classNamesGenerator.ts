@@ -1,21 +1,16 @@
 interface Props {
-    ccn: string;
-    data: string[]
+  ccn: string
+  data: string[]
 }
 
-const classNamesGenerator = (props: Props) => {
-    const { ccn, data } = props;
-    const classList = [ccn];
+const classNamesGenerator = ({ ccn, data }: Props): string => {
+  const classList = [ccn]
 
-    if (data.length > 0) {
-        for (let item in data) {
-            const key = data[item];
-            classList.push(`${ccn}-${key}`)
-        }
-    }
+  data.forEach(key => {
+    classList.push(`${ccn}-${key}`)
+  })
 
-    return classList.join(" ");
-};
-
+  return classList.join(' ')
+}
 
 export default classNamesGenerator
