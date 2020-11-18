@@ -33,6 +33,7 @@ import Table from '../src/Table'
 import Modal from '../src/Modal'
 import Toggle from '../src/Toggle'
 import Menu from '../src/Menu'
+import Steps from '../src/Steps'
 
 import raw from './raw'
 
@@ -184,6 +185,35 @@ const tableData = {
   }
 }
 
+const steps = [
+  {
+    step: 'Set up your schema',
+    description:
+      'Define the schema of your content that will shape your editing interface and API.',
+    done: true,
+    href: '#'
+  },
+  {
+    step: 'Create Content',
+    description: 'Use the intuitive editing interface to fill your project with content.',
+    done: false,
+    href: '#'
+  },
+  {
+    step: 'Make your API accesible',
+    description:
+      'Open your API to the public or create secure tokens to access your API from the outside.',
+    done: false,
+    href: '#'
+  },
+  {
+    step: 'Integrate your content into your applications',
+    description: 'Learn how to fetch content with GraphQL, using the interactive API Playground.',
+    done: false,
+    href: '#'
+  }
+]
+
 class App extends Component {
   state = {
     text: '',
@@ -252,6 +282,13 @@ class App extends Component {
       <StyledApp>
         <div>
           <h1>@contentpi/ui</h1>
+          <h2>Steps</h2>
+          <div style={{ border: '1px solid #eee', padding: '10px', marginBottom: '20px' }}>
+            <Steps steps={steps} />
+          </div>
+          <div style={{ border: '1px solid #eee', padding: '10px' }}>
+            <Steps steps={steps} color="#00e293" />
+          </div>
           <h2>Block</h2>
           <EntryBlock
             onClick={() => console.log('Click')}
