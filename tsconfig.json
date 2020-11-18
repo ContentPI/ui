@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
-    "baseUrl": "./src",
+    "baseUrl": "./",
     "declaration": true,
     "esModuleInterop": true,
     "module": "commonjs",
@@ -12,7 +12,11 @@
     "typeRoots": ["./src/@types", "./node_modules/@types"],
     "types": ["jest", "node"],
     "jsx": "react",
-    "strictFunctionTypes": false
+    "strictFunctionTypes": false,
+    "paths": {
+      "@Utils": ["src/utils/index.ts"],
+      "@Theme": ["src/theme/index.ts"]
+    },
   },
   "files": [
     "src/Accordion/index.tsx",

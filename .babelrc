@@ -6,5 +6,19 @@
   },
   "presets": ["@babel/preset-env", "@babel/preset-react"],
 
-  "plugins": ["babel-plugin-styled-components", "@babel/plugin-transform-runtime", "@emotion"]
+  "plugins": [
+    "babel-plugin-styled-components",
+    "@babel/plugin-transform-runtime",
+    "@emotion",
+    [
+      "module-resolver",
+      {
+        "root": ["./"],
+        "alias": {
+          "@Utils": ["./src/utils/index.ts"],
+          "@Theme": ["./src/theme/index.ts"]
+        }
+      }
+    ]
+  ]
 }

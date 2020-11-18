@@ -25,6 +25,10 @@ module.exports = {
     ]
   },
   resolve: {
+    alias: {
+      "@Theme": path.resolve(__dirname, 'src/theme/index.ts'),
+      "@Utils": path.resolve(__dirname, 'src/utils/index.ts'),
+    },
     extensions: ['*', '.ts', '.tsx', '.js', '.jsx', '.svg']
   },
   devtool: devMode ? 'source-map' : '',
