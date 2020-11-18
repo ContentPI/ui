@@ -1,6 +1,8 @@
 // Dependencies
 import React, { Component, ReactElement } from 'react'
 
+import styled from '@emotion/styled'
+
 // Components
 import Alert from '../src/Alert'
 import Accordion from '../src/Accordion'
@@ -30,10 +32,33 @@ import Table from '../src/Table'
 import Modal from '../src/Modal'
 import Toggle from '../src/Toggle'
 import Menu from '../src/Menu'
+import Steps from '../src/Steps'
 
 import raw from './raw'
 
-import styles from './App.scss'
+const StyledApp = styled.div`
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1rem;
+  background-color: #fff;
+  margin: 0 auto;
+  padding-bottom: 500px;
+  width: 95%;
+
+  h1 {
+    text-align: center;
+  }
+
+  button {
+    margin-right: 5px;
+  }
+
+  .spinners {
+    display: flex;
+    justify-content: space-between;
+    background: #34495e;
+    padding: 20px;
+  }
+`
 
 const panels = [
   {
@@ -159,6 +184,35 @@ const tableData = {
   }
 }
 
+const steps = [
+  {
+    step: 'Set up your schema',
+    description:
+      'Define the schema of your content that will shape your editing interface and API.',
+    done: true,
+    href: '#'
+  },
+  {
+    step: 'Create Content',
+    description: 'Use the intuitive editing interface to fill your project with content.',
+    done: false,
+    href: '#'
+  },
+  {
+    step: 'Make your API accesible',
+    description:
+      'Open your API to the public or create secure tokens to access your API from the outside.',
+    done: false,
+    href: '#'
+  },
+  {
+    step: 'Integrate your content into your applications',
+    description: 'Learn how to fetch content with GraphQL, using the interactive API Playground.',
+    done: false,
+    href: '#'
+  }
+]
+
 class App extends Component {
   state = {
     text: '',
@@ -224,9 +278,16 @@ class App extends Component {
     const { clicked, text } = this.state
 
     return (
-      <div className={styles.App}>
+      <StyledApp>
         <div>
           <h1>@contentpi/ui</h1>
+          <h2>Steps</h2>
+          <div style={{ border: '1px solid #eee', padding: '10px', marginBottom: '20px' }}>
+            <Steps steps={steps} />
+          </div>
+          <div style={{ border: '1px solid #eee', padding: '10px' }}>
+            <Steps steps={steps} color="#00e293" />
+          </div>
           <h2>Block</h2>
           <EntryBlock
             onClick={() => console.log('Click')}
@@ -647,7 +708,7 @@ class App extends Component {
           <h3>Dark Theme</h3>
           <Pagination design="dark" page={10} total={100} href="/page/" />
           <h2>Spinners</h2>
-          <div className={styles.spinners}>
+          <div className="spinners">
             <Spinner spinner="audio" style={{ width: '30px' }} />{' '}
             <Spinner spinner="ball-triangle" style={{ width: '30px' }} />{' '}
             <Spinner spinner="bars" style={{ width: '30px' }} />
@@ -663,7 +724,7 @@ class App extends Component {
           <h2>Placeholder</h2>
           <Placeholder />
         </div>
-      </div>
+      </StyledApp>
     )
   }
 }
