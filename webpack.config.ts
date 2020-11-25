@@ -55,7 +55,7 @@ module.exports = {
     moment: 'moment',
     '@contentpi/utils': '@contentpi/utils',
     emotion: 'emotion',
-    '@emotion/core': '@emotion/core',
+    '@emotion/react': '@emotion/react',
     '@emotion/styled': '@emotion/styled',
     'isomorphic-fetch': 'isomorphic-fetch'
   },
