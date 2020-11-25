@@ -7,21 +7,38 @@ interface iProps {
   className?: string
   type?: string
   title?: string
+  library?: 'fontawesome' | 'feather'
+  width?: number
+  height?: number
+  background?: string
   onClick?(): void
 }
 
 const Icon: FC<iProps> = (props): ReactElement => {
-  const { type, className = '', children } = props
+  const { type, className = '', children, library = 'fontawesome' } = props
   const iconProps = { ...props }
 
   delete iconProps.type
   delete iconProps.className
+  delete iconProps.library
   let style = {}
 
   if (props.onClick) {
     style = {
       cursor: 'pointer'
     }
+  }
+
+  if (library !== 'fontawesome') {
+    return (
+      <img
+        className={cx('Icon', className)}
+        style={style}
+        {...iconProps}
+        alt={type}
+        src={require(`./icons/${library}/${type}.svg`)}
+      />
+    )
   }
 
   if (children) {
