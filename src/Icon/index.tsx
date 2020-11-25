@@ -8,6 +8,7 @@ interface iProps {
   type?: string
   title?: string
   library?: 'fontawesome' | 'feather'
+  stroke?: string
   width?: number
   height?: number
   background?: string
@@ -15,8 +16,9 @@ interface iProps {
 }
 
 const Icon: FC<iProps> = (props): ReactElement => {
-  const { type, className = '', children, library = 'fontawesome' } = props
-  const iconProps = { ...props }
+  const { type, className = '', children, library = 'fontawesome', width = 24 } = props
+  const height = props.height !== width ? width : 24
+  const iconProps = { ...props, width, height }
 
   delete iconProps.type
   delete iconProps.className
@@ -30,15 +32,9 @@ const Icon: FC<iProps> = (props): ReactElement => {
   }
 
   if (library !== 'fontawesome') {
-    return (
-      <img
-        className={cx('Icon', className)}
-        style={style}
-        {...iconProps}
-        alt={type}
-        src={require(`./icons/${library}/${type}.svg`)}
-      />
-    )
+    const Icon = require(`./icons/${library}/${type}.svg`).default
+
+    return <Icon {...iconProps} />
   }
 
   if (children) {

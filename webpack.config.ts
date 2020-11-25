@@ -16,7 +16,7 @@ module.exports = {
     rules: [
       {
         test: /\.svg$/,
-        loader: 'svg-url-loader'
+        use: ['@svgr/webpack']
       },
       {
         test: /\.(tsx|ts)$/,
