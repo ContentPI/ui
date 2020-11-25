@@ -1,6 +1,6 @@
 {
   "name": "@contentpi/ui",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "main": "dist/index.js",
   "scripts": {
     "sandbox": "webpack-dev-server --config webpack.sandbox.config.ts",
