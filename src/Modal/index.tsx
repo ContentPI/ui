@@ -22,10 +22,10 @@ const StyledBody = `
   ::-webkit-scrollbar-thumb { height: 20px; background-color: #222; border-radius: 10px; }
 
   input {
-      border-radius: 0;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
   }
 `
 

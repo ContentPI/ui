@@ -15,7 +15,22 @@ module.exports = {
     rules: [
       {
         test: /\.svg$/,
-        use: ['@svgr/webpack']
+        oneOf: [
+          {
+            include: [
+              path.resolve(__dirname, './src/Accordion/icons'),
+              path.resolve(__dirname, './src/Menu/icons'),
+              path.resolve(__dirname, './src/Modal/icons'),
+              path.resolve(__dirname, './src/Spinner/loaders'),
+              path.resolve(__dirname, './src/Steps')
+            ],
+            use: 'svg-url-loader'
+          },
+          {
+            include: path.resolve(__dirname, './src/Icon/icons'),
+            use: '@svgr/webpack'
+          }
+        ]
       },
       {
         test: /\.(tsx|ts)$/,
