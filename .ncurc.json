@@ -1,4 +1,4 @@
 {
   "upgrade": true,
-  "reject": ["webpack", "webpack-cli", "@emotion/react", "@emotion/styled", "emotion"]
+  "reject": ["webpack", "webpack-cli"]
 }

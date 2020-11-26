@@ -633,6 +633,11 @@ class App extends Component {
           <h2>Icon</h2>
           <Icon type="fas fa-angle-right" /> <Icon type="fas fa-align-justify" />{' '}
           <Icon type="fab fa-apple" /> <Icon type="fab fa-facebook-square" />
+          <h2>Feater Icons</h2>
+          <Icon type="alert-circle" library="feather" width={40} stroke="orange" />
+          <Icon type="align-center" library="feather" stroke="#55FFAA" width={80} />
+          <Icon type="arrow-left" library="feather" stroke="#ccc" width={50} />
+          <Icon type="globe" library="feather" stroke="red" width={100} />
           <h2>RenderIf</h2>
           <PrimaryButton onClick={this.handleClick}>Click it</PrimaryButton>
           <RenderIf isTrue={clicked}>

@@ -110,12 +110,11 @@ const StyledSteps = styled.ul`
       }
 
       &::after {
-        font-family: 'Font Awesome 5 Free';
         font-weight: 900;
-        content: '\f00c';
+        content: '✔';
         font-size: 15px;
         color: #fff;
-        line-height: 32px;
+        line-height: 29px;
         text-align: center;
         ${({ color }): any => `
           background-color: ${color};
