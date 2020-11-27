@@ -15,6 +15,9 @@
       {
         "root": ["./"],
         "alias": {
+          "@Atoms": ["./src/components/Atoms/index.ts"],
+          "@Molecules": ["./src/components/Molecules/index.ts"],
+          "@Organisms": ["./src/components/Organisms/index.ts"],
           "@Utils": ["./src/utils/index.ts"],
           "@Theme": ["./src/theme/index.ts"]
         }

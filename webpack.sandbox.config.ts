@@ -41,6 +41,9 @@ module.exports = {
   },
   resolve: {
     alias: {
+      "@Atoms": path.resolve(__dirname, 'src/components/Atoms/index.ts'),
+      "@Molecules": path.resolve(__dirname, 'src/components/Molecules/index.ts'),
+      "@Organisms": path.resolve(__dirname, 'src/components/Organisms/index.ts'),
       "@Theme": path.resolve(__dirname, 'src/theme/index.ts'),
       "@Utils": path.resolve(__dirname, 'src/utils/index.ts'),
     },

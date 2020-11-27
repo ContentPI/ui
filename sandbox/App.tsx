@@ -3,13 +3,15 @@ import React, { Component, ReactElement } from 'react'
 
 import styled from '@emotion/styled'
 
+// Atoms
+import { Button } from '@Atoms'
+
 // Components
 import Alert from '../src/Alert'
 import Accordion from '../src/Accordion'
 import EntryBlock from '../src/EntryBlock'
 import Badge from '../src/Badge'
 import File from '../src/File'
-import Button from '../src/components/Button'
 import LinkButton from '../src/Button/Link'
 import DangerButton from '../src/Button/Danger'
 import DarkButton from '../src/Button/Dark'

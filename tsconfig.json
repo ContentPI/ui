@@ -14,9 +14,12 @@
     "jsx": "react",
     "strictFunctionTypes": false,
     "paths": {
+      "@Atoms": ["src/components/Atoms/index.ts"],
+      "@Molecules": ["src/components/Molecules/index.ts"],
+      "@Organisms": ["src/components/Organisms/index.ts"],
       "@Utils": ["src/utils/index.ts"],
       "@Theme": ["src/theme/index.ts"]
-    },
+    }
   },
   "files": [
     "src/Accordion/index.tsx",
@@ -51,6 +54,6 @@
     "src/TextCounter/index.tsx",
     "src/Toggle/index.tsx"
   ],
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "sandbox/*"],
   "exclude": ["node_modules", "**/__tests__/*"]
 }
