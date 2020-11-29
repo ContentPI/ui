@@ -1,4 +1,4 @@
-import React, { FC, ReactElement, useState } from 'react'
+import React, { FC, ReactElement, useState, useEffect, useRef } from 'react'
 import styled from '@emotion/styled'
 import { cx } from '@contentpi/utils'
 import Icon from '../Icon'
@@ -128,6 +128,15 @@ const Select: FC<iProps> = (props): ReactElement => {
   } = props
   const [open, setOpen] = useState(false)
   const [selectedOption, setValue] = useState({ option: '', value: '' })
+  const node = useRef() as React.MutableRefObject<HTMLInputElement>
+
+  const handleClickOutside = (e: any) => {
+    if (node.current.contains(e.target)) {
+      return
+    }
+
+    setOpen(false)
+  }
 
   const handleOpenOnClick = (): void => setOpen(!open)
 
@@ -177,8 +186,20 @@ const Select: FC<iProps> = (props): ReactElement => {
     )
   }
 
+  useEffect(() => {
+    if (open) {
+      document.addEventListener('mousedown', handleClickOutside)
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [open])
+
   return (
-    <div style={{ marginTop: '5px', marginBottom: '20px' }}>
+    <div ref={node} style={{ marginTop: '5px', marginBottom: '20px' }}>
       <StyledSelect {...props} type={type} className={cx('Select', className)}>
         {top && renderList()}
 
