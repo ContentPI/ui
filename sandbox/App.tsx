@@ -609,6 +609,7 @@ class App extends Component {
           <Icon type="align-center" library="feather" stroke="#55FFAA" width={80} />
           <Icon type="arrow-left" library="feather" stroke="#ccc" width={50} />
           <Icon type="globe" library="feather" stroke="red" width={100} />
+          <Icon type="g-translate" library="material" />
           <h2>RenderIf</h2>
           <PrimaryButton onClick={this.handleClick}>Click it</PrimaryButton>
           <RenderIf isTrue={clicked}>
