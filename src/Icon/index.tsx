@@ -8,6 +8,7 @@ interface iProps {
   type?: string
   title?: string
   library?: 'fontawesome' | 'feather' | 'material'
+  fill?: string
   stroke?: string
   width?: number
   height?: number
