@@ -10,9 +10,9 @@ const theme: Theme = {
       default: '#212529'
     },
     primary: {
-      main: '#007bff',
-      light: '#007bff',
-      dark: '#007bff',
+      main: '#00bde5',
+      light: '#65f0ff',
+      dark: '#008db3',
       contrastText: '#fff'
     },
     secondary: {

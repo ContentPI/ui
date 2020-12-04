@@ -60,9 +60,8 @@ export const ButtonBase = styled.button`
     border-color: ${({ theme }) => theme.palette.primary.main};
 
     &:hover {
-      color: #fff;
-      background-color: #0c8967;
-      border-color: #0b7d5e;
+      background-color: ${({ theme }) => theme.palette.primary.dark};
+      border-color: ${({ theme }) => theme.palette.primary.dark};
     }
   }
   &.${COMPONENT_CLASS_NAME}-outlined {
