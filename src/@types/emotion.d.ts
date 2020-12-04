@@ -31,6 +31,10 @@ declare module '@emotion/react' {
       background: IBackground
       primary: IPalette
       secondary: IPalette
+      info: IPalette
+      success: IPalette
+      warning: IPalette
+      danger: IPalette
       text: ITextColors
     }
   }

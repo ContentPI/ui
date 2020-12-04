@@ -21,6 +21,30 @@ const theme: Theme = {
       dark: '#007bff',
       contrastText: '#fff'
     },
+    info: {
+      main: '#00bcd4',
+      light: '#00aec5',
+      dark: '#008fa1',
+      contrastText: '#fff'
+    },
+    success: {
+      main: '#4caf50',
+      light: '#47a44b',
+      dark: '#3d8b40',
+      contrastText: '#fff'
+    },
+    warning: {
+      main: '#ff9800',
+      light: '#ffe608',
+      dark: '#f08f00',
+      contrastText: '#fff'
+    },
+    danger: {
+      main: '#f44336',
+      light: '#f33527',
+      dark: '#ea1c0d',
+      contrastText: '#fff'
+    },
     text: {
       primary: 'rgba(0, 0, 0, 0.87)',
       secondary: 'rgba(0, 0, 0, 0.54)',
