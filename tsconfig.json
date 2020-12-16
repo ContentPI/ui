@@ -18,6 +18,7 @@
     "src/Accordion/index.tsx",
     "src/Alert/index.tsx",
     "src/Badge/index.tsx",
+    "src/Breadcrumbs/index.tsx",
     "src/Button/Danger.tsx",
     "src/Button/Dark.tsx",
     "src/Button/Light.tsx",

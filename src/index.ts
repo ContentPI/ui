@@ -1,6 +1,7 @@
 export { default as Accordion } from './Accordion'
 export { default as Alert } from './Alert'
 export { default as Badge } from './Badge'
+export { default as Breadcrumbs } from './Breadcrumbs'
 export { default as Center } from './Center'
 export { default as Checkbox } from './Checkbox'
 export { default as DangerButton } from './Button/Danger'

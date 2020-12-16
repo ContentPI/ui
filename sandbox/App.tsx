@@ -6,6 +6,7 @@ import styled from '@emotion/styled'
 // Components
 import Alert from '../src/Alert'
 import Accordion from '../src/Accordion'
+import Breadcrumbs from '../src/Breadcrumbs'
 import EntryBlock from '../src/EntryBlock'
 import Badge from '../src/Badge'
 import File from '../src/File'
@@ -213,6 +214,21 @@ const steps = [
   }
 ]
 
+const breadcrumbs = [
+  {
+    title: 'Home',
+    href: '/'
+  },
+  {
+    title: 'Schema',
+    href: '/schema'
+  },
+  {
+    title: 'Post',
+    href: '/master/schema/model/post'
+  }
+]
+
 class App extends Component {
   state = {
     text: '',
@@ -281,6 +297,8 @@ class App extends Component {
       <StyledApp>
         <div>
           <h1>@contentpi/ui</h1>
+          <h2>Breadcrumbs</h2>
+          <Breadcrumbs breadcrumbs={breadcrumbs} />
           <h2>Steps</h2>
           <div style={{ border: '1px solid #eee', padding: '10px', marginBottom: '20px' }}>
             <Steps steps={steps} />
