@@ -35,6 +35,8 @@ declare module '@emotion/react' {
       success: IPalette
       warning: IPalette
       danger: IPalette
+      light: IPalette
+      dark: IPalette
       text: ITextColors
     }
   }

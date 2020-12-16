@@ -1,10 +1,11 @@
 interface Props {
+  cpn: string
   ccn: string
   data: string[]
 }
 
-const classNamesGenerator = ({ ccn, data }: Props): string => {
-  const classList = [ccn]
+const classNamesGenerator = ({ cpn, ccn, data }: Props): string => {
+  const classList = [cpn, ccn]
 
   data.forEach(key => {
     classList.push(`${ccn}-${key}`)

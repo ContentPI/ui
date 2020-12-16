@@ -45,6 +45,18 @@ const theme: Theme = {
       dark: '#ea1c0d',
       contrastText: '#fff'
     },
+    light: {
+      main: '#E5E9F2',
+      light: '#E5E9F2',
+      dark: '#E5E9F2',
+      contrastText: '#fff'
+    },
+    dark: {
+      main: '#22272A',
+      light: '#22272A',
+      dark: '#22272A',
+      contrastText: '#fff'
+    },
     text: {
       primary: 'rgba(0, 0, 0, 0.87)',
       secondary: 'rgba(0, 0, 0, 0.54)',
