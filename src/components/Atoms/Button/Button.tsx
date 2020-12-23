@@ -1,6 +1,7 @@
 import React from 'react'
 import { classNamesGenerator } from '@Utils'
 import { COMPONENT_CLASS_NAME, ButtonBase, Sizes, Variants, Colors } from './styles'
+import { useDefaultTheme } from '@Theme'
 
 interface Props extends React.ComponentPropsWithoutRef<'button'> {
   size?: Sizes
@@ -9,6 +10,7 @@ interface Props extends React.ComponentPropsWithoutRef<'button'> {
 }
 
 const Button: React.FC<Props> = props => {
+  const theme = useDefaultTheme()
   const { children, size = 'md', variant = 'contained', color = 'primary', ...btnProps } = props
   const classNames = classNamesGenerator({
     cpn: 'Button',
@@ -17,7 +19,7 @@ const Button: React.FC<Props> = props => {
   })
 
   return (
-    <ButtonBase className={classNames} {...btnProps}>
+    <ButtonBase className={classNames} {...btnProps} theme={theme}>
       {children}
     </ButtonBase>
   )
