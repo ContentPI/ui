@@ -1,7 +1,8 @@
 import React from 'react'
-import { classNamesGenerator } from '@Utils'
-import { COMPONENT_CLASS_NAME, ButtonBase, Sizes, Variants, Colors } from './styles'
 import { useDefaultTheme } from '@Theme'
+import { classNamesGenerator } from '@Utils'
+
+import { COMPONENT_CLASS_NAME, ButtonBase, Sizes, Variants, Colors } from './styles'
 
 interface Props extends React.ComponentPropsWithoutRef<'button'> {
   size?: Sizes
