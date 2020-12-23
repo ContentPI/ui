@@ -40,6 +40,12 @@ module.exports = {
     ]
   },
   resolve: {
+    alias: {
+      '@atoms': path.resolve(__dirname, 'src/components/Atoms/index.ts'),
+      '@molecules': path.resolve(__dirname, 'src/components/Molecules/index.ts'),
+      '@organisms': path.resolve(__dirname, 'src/components/Organisms/index.ts'),
+      '@theme': path.resolve(__dirname, 'src/theme/index.ts')
+    },
     extensions: ['*', '.ts', '.tsx', '.js', '.jsx', '.svg']
   },
   devtool: devMode ? 'source-map' : '',
