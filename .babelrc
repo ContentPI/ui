@@ -1,8 +1,15 @@
 {
+  "env": {
+    "production": {
+      "plugins": ["@emotion"]
+    }
+  },
   "presets": ["@babel/preset-env", "@babel/preset-react"],
+
   "plugins": [
     "babel-plugin-styled-components",
     "@babel/plugin-transform-runtime",
+    "@emotion",
     [
       "module-resolver",
       {
@@ -11,7 +18,6 @@
           "@atoms": ["./src/components/Atoms/index.ts"],
           "@molecules": ["./src/components/Molecules/index.ts"],
           "@organisms": ["./src/components/Organisms/index.ts"],
-          "@utils": ["./src/utils/index.ts"],
           "@theme": ["./src/theme/index.ts"]
         }
       }
