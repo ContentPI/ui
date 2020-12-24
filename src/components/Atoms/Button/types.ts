@@ -7,5 +7,6 @@ export type Colors =
   | 'danger'
   | 'light'
   | 'dark'
-export type Sizes = 'sm' | 'md' | 'lg' | 'xl'
+export type Sizes = 'sm' | 'md' | 'lg' | 'xl' | 'full'
 export type Variants = 'contained' | 'outlined' | 'text'
+export type Block = 'full'

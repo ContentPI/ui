@@ -26,6 +26,7 @@ const StyledApp = styled.div`
   button {
     margin-right: 5px;
   }
+
   .spinners {
     display: flex;
     justify-content: space-between;
@@ -38,6 +39,17 @@ const StyledBlock = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
+
+  .block {
+    min-width: 100%;
+
+    strong {
+      border-radius: 5px;
+      font-weight: 500;
+      padding: 4px;
+      background: #eee;
+    }
+  }
 
   pre {
     min-width: 750px;
@@ -80,11 +92,20 @@ const App: FC = () => {
 
       <h2>&lt;Button /&gt;</h2>
 
-      {buttons.map(({ title, description, render, code }: iButton, i: number) => (
-        <StyledBlock>
-          <div>
+      {buttons.map(({ title, prop, description, render, code }: iButton, i: number) => (
+        <StyledBlock key={`block-${i}`}>
+          <div className="block">
             <h3>{title}</h3>
-            <p>{description}</p>
+            <p>
+              {prop ? (
+                <>
+                  <strong>{prop}</strong>:
+                </>
+              ) : (
+                ''
+              )}{' '}
+              {description}
+            </p>
 
             {render}
 

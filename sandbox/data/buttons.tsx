@@ -5,6 +5,7 @@ import { Button } from '@atoms'
 
 export interface iButton {
   title: string
+  prop?: string
   description: string
   render: ReactElement
   code: string
@@ -37,8 +38,8 @@ const buttons: iButton[] = [
   },
   {
     title: 'Colors',
-    description:
-      'Available colors: primary, secondary, info, success, warning, danger, dark, light',
+    prop: 'color',
+    description: 'primary, secondary, info, success, warning, danger, dark, light',
     render: (
       <>
         <Button color="primary">Primary</Button>
@@ -64,8 +65,8 @@ const buttons: iButton[] = [
   },
   {
     title: 'Disabled',
-    description:
-      'Available colors: primary, secondary, info, success, warning, danger, dark, light',
+    prop: 'disabled',
+    description: 'boolean',
     render: (
       <>
         <Button color="primary" disabled>
@@ -123,8 +124,8 @@ const buttons: iButton[] = [
   },
   {
     title: 'Variant Outlined',
-    description:
-      'Available colors: primary, secondary, info, success, warning, danger, dark, light',
+    prop: 'variant',
+    description: 'outlined',
     render: (
       <>
         <Button color="primary" variant="outlined">
@@ -166,7 +167,8 @@ const buttons: iButton[] = [
   },
   {
     title: 'Sizes',
-    description: 'Available sizes: sm, md, lg & xl',
+    prop: 'size',
+    description: 'sm, md, lg & xl',
     render: (
       <>
         <p>
@@ -193,9 +195,6 @@ const buttons: iButton[] = [
           <Button color="primary" size="lg" variant="outlined">
             Large Size
           </Button>
-          <Button color="primary" size="xl" variant="outlined">
-            ExtraLarge Size
-          </Button>
         </p>
       </>
     ),
@@ -209,6 +208,29 @@ const buttons: iButton[] = [
     <Button color="primary" variant="outlined" size="md">Primary</Button>
     <Button color="primary" variant="outlined" size="lg">Primary</Button>
     <Button color="primary" variant="outlined" size="xl">Primary</Button>
+    `
+  },
+  {
+    title: 'Block',
+    prop: 'block',
+    description: 'full',
+    render: (
+      <>
+        <p>
+          <Button color="primary" block="full">
+            Block level button
+          </Button>
+        </p>
+        <p>
+          <Button color="secondary" block="full">
+            Block level button
+          </Button>
+        </p>
+      </>
+    ),
+    code: `
+    <Button color="primary" block="full">Block level button</Button>
+    <Button color="secondary" block="full">Block level button</Button>
     `
   }
 ]

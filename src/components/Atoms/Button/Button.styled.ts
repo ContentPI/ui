@@ -31,6 +31,9 @@ const ButtonSizesStyles = css`
     line-height: 2rem;
     border-radius: 5px;
   }
+  &.${COMPONENT_CLASS_NAME}-full {
+    width: 100%;
+  }
 `
 
 const ButtonVariantsStyles = (theme: Theme = defaultTheme) => css`
@@ -277,5 +280,5 @@ export const ButtonBase = styled.button`
   }
 
   ${ButtonSizesStyles}
-  ${({ theme }) => ButtonVariantsStyles(isEmptyObject(theme) ? defaultTheme : theme)}
+  ${({ theme }) => ButtonVariantsStyles(theme)}
 `
