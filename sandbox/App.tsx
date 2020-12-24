@@ -4,7 +4,7 @@ import React, { Component, ReactElement } from 'react'
 import styled from '@emotion/styled'
 
 // Atoms
-import { Button } from '@Atoms'
+import { Button } from '@atoms'
 
 // Components
 import Alert from '../src/Alert'
