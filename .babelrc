@@ -1,4 +1,26 @@
 {
+  "env": {
+    "production": {
+      "plugins": ["@emotion"]
+    }
+  },
   "presets": ["@babel/preset-env", "@babel/preset-react"],
-  "plugins": ["babel-plugin-styled-components", "@babel/plugin-transform-runtime"]
+
+  "plugins": [
+    "babel-plugin-styled-components",
+    "@babel/plugin-transform-runtime",
+    "@emotion",
+    [
+      "module-resolver",
+      {
+        "root": ["./"],
+        "alias": {
+          "@atoms": ["./src/components/Atoms/index.ts"],
+          "@molecules": ["./src/components/Molecules/index.ts"],
+          "@organisms": ["./src/components/Organisms/index.ts"],
+          "@theme": ["./src/theme/index.ts"]
+        }
+      }
+    ]
+  ]
 }

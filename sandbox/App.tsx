@@ -3,6 +3,9 @@ import React, { Component, ReactElement } from 'react'
 
 import styled from '@emotion/styled'
 
+// Atoms
+import { Button } from '@atoms'
+
 // Components
 import Alert from '../src/Alert'
 import Accordion from '../src/Accordion'
@@ -465,6 +468,34 @@ class App extends Component {
           />
           <h2>Buttons</h2>
           <h3>Button with Spinner</h3>
+          <p>
+            <Button variant="contained" size="sm">
+              Hello World
+            </Button>
+            <Button variant="contained" size="md">
+              Hello World
+            </Button>
+            <Button variant="contained" size="lg">
+              Hello World
+            </Button>
+            <Button size="sm" variant="text">
+              Primary
+              <span>"hello2"</span>
+            </Button>
+            <Button>Primary</Button>
+            <Button size="lg" variant="outlined">
+              Primary
+            </Button>
+            <Button size="xl" variant="outlined">
+              Primary
+            </Button>
+            <Button size="sm">Primary</Button>
+            <Button>Primary</Button>
+            <Button size="lg">Primary</Button>
+            <Button size="xl" disabled>
+              Primary
+            </Button>
+          </p>
           <p>
             <DarkButton
               onClick={this.handleLoadingClick}

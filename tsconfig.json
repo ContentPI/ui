@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
-    "baseUrl": "./src",
+    "baseUrl": "./",
     "declaration": true,
     "esModuleInterop": true,
     "module": "commonjs",
@@ -12,7 +12,13 @@
     "typeRoots": ["./src/@types", "./node_modules/@types"],
     "types": ["jest", "node"],
     "jsx": "react",
-    "strictFunctionTypes": false
+    "strictFunctionTypes": false,
+    "paths": {
+      "@atoms": ["src/components/Atoms/index.ts"],
+      "@molecules": ["src/components/Molecules/index.ts"],
+      "@organisms": ["src/components/Organisms/index.ts"],
+      "@theme": ["src/theme/index.ts"]
+    }
   },
   "files": [
     "src/Accordion/index.tsx",
@@ -48,6 +54,6 @@
     "src/TextCounter/index.tsx",
     "src/Toggle/index.tsx"
   ],
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*", "sandbox/*"],
   "exclude": ["node_modules", "**/__tests__/*"]
 }
