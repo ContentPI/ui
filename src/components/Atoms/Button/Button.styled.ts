@@ -89,7 +89,7 @@ const ButtonVariantsStyles = (theme: Theme = defaultTheme) => css`
         border-color: ${theme.palette.danger.dark};
       }
     }
-    &.${COMPONENT_CLASS_NAME}-ligh {
+    &.${COMPONENT_CLASS_NAME}-light {
       color: ${theme.palette.light.contrastText};
       background-color: ${theme.palette.light.main};
       border-color: ${theme.palette.light.main};

@@ -40,7 +40,7 @@ const StyledBlock = styled.div`
   width: 100%;
 
   pre {
-    min-width: 650px;
+    min-width: 750px;
   }
 `
 const StyledShowCode = styled.div`

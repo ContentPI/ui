@@ -5,7 +5,7 @@ import { useDefaultTheme } from '@theme'
 import { Sizes, Variants, Colors } from './types'
 import { ButtonBase, COMPONENT_CLASS_NAME } from './Button.styled'
 
-interface Props extends React.ComponentPropsWithoutRef<'button'> {
+interface iProps extends ComponentPropsWithoutRef<'button'> {
   size?: Sizes
   variant?: Variants
   color?: Colors
