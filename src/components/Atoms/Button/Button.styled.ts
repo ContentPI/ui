@@ -1,7 +1,6 @@
 // Dependencies
 import styled from '@emotion/styled'
 import { css, Theme } from '@emotion/react'
-import { isEmptyObject } from '@contentpi/utils'
 import { defaultTheme } from '@theme'
 
 export const COMPONENT_CLASS_NAME = 'btn'
@@ -33,6 +32,11 @@ const ButtonSizesStyles = css`
   }
   &.${COMPONENT_CLASS_NAME}-full {
     width: 100%;
+  }
+  &.${COMPONENT_CLASS_NAME}-link {
+    display: inline-block;
+    margin-right: 5px;
+    text-decoration: none;
   }
 `
 
@@ -261,7 +265,7 @@ const ButtonVariantsStyles = (theme: Theme = defaultTheme) => css`
   }
 `
 
-export const ButtonBase = styled.button`
+const ButtonStyle = css`
   &.${COMPONENT_CLASS_NAME} {
     user-select: none;
     border: 1px solid transparent;
@@ -279,6 +283,20 @@ export const ButtonBase = styled.button`
     }
   }
 
+  &.${COMPONENT_CLASS_NAME}-disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+`
+
+export const ButtonBase = styled.button`
+  ${ButtonStyle}
+  ${ButtonSizesStyles}
+  ${({ theme }) => ButtonVariantsStyles(theme)}
+`
+
+export const LinkButtonBase = styled.a`
+  ${ButtonStyle}
   ${ButtonSizesStyles}
   ${({ theme }) => ButtonVariantsStyles(theme)}
 `

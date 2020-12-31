@@ -15,7 +15,7 @@ const buttons: iButton[] = [
   {
     title: 'Button',
     description: 'A standard button',
-    render: <Button>Button</Button>,
+    render: <Button href="#">Button</Button>,
     code: `
     <Button>
       Standard Button
@@ -27,8 +27,10 @@ const buttons: iButton[] = [
     description: 'A button can be formatted to show different levels of emphasis',
     render: (
       <>
-        <Button color="primary">Save</Button>
-        <Button>Cancel</Button>
+        <Button color="primary" href="#">
+          Save
+        </Button>
+        <Button href="#">Cancel</Button>
       </>
     ),
     code: `
@@ -42,14 +44,30 @@ const buttons: iButton[] = [
     description: 'primary, secondary, info, success, warning, danger, dark, light',
     render: (
       <>
-        <Button color="primary">Primary</Button>
-        <Button color="secondary">Secondary</Button>
-        <Button color="info">Info</Button>
-        <Button color="success">Success</Button>
-        <Button color="warning">Warning</Button>
-        <Button color="danger">Danger</Button>
-        <Button color="dark">Dark</Button>
-        <Button color="light">Light</Button>
+        <Button color="primary" href="#">
+          Primary
+        </Button>
+        <Button color="secondary" href="#">
+          Secondary
+        </Button>
+        <Button color="info" href="#">
+          Info
+        </Button>
+        <Button color="success" href="#">
+          Success
+        </Button>
+        <Button color="warning" href="#">
+          Warning
+        </Button>
+        <Button color="danger" href="#">
+          Danger
+        </Button>
+        <Button color="dark" href="#">
+          Dark
+        </Button>
+        <Button color="light" href="#">
+          Light
+        </Button>
       </>
     ),
     code: `
@@ -69,28 +87,28 @@ const buttons: iButton[] = [
     description: 'boolean',
     render: (
       <>
-        <Button color="primary" disabled>
+        <Button color="primary" disabled href="#">
           Disabled
         </Button>
-        <Button color="secondary" disabled>
+        <Button color="secondary" disabled href="#">
           Secondary
         </Button>
-        <Button color="info" disabled>
+        <Button color="info" disabled href="#">
           Info
         </Button>
-        <Button color="success" disabled>
+        <Button color="success" disabled href="#">
           Success
         </Button>
-        <Button color="warning" disabled>
+        <Button color="warning" disabled href="#">
           Warning
         </Button>
-        <Button color="danger" disabled>
+        <Button color="danger" disabled href="#">
           Danger
         </Button>
-        <Button color="dark" disabled>
+        <Button color="dark" disabled href="#">
           Dark
         </Button>
-        <Button color="light" disabled>
+        <Button color="light" disabled href="#">
           Light
         </Button>
       </>
@@ -128,28 +146,28 @@ const buttons: iButton[] = [
     description: 'outlined',
     render: (
       <>
-        <Button color="primary" variant="outlined">
+        <Button color="primary" variant="outlined" href="#">
           Primary
         </Button>
-        <Button color="secondary" variant="outlined">
+        <Button color="secondary" variant="outlined" href="#">
           Secondary
         </Button>
-        <Button color="info" variant="outlined">
+        <Button color="info" variant="outlined" href="#">
           Info
         </Button>
-        <Button color="success" variant="outlined">
+        <Button color="success" variant="outlined" href="#">
           Success
         </Button>
-        <Button color="warning" variant="outlined">
+        <Button color="warning" variant="outlined" href="#">
           Warning
         </Button>
-        <Button color="danger" variant="outlined">
+        <Button color="danger" variant="outlined" href="#">
           Danger
         </Button>
-        <Button color="dark" variant="outlined">
+        <Button color="dark" variant="outlined" href="#">
           Dark
         </Button>
-        <Button color="light" variant="outlined">
+        <Button color="light" variant="outlined" href="#">
           Light
         </Button>
       </>
@@ -172,27 +190,27 @@ const buttons: iButton[] = [
     render: (
       <>
         <p>
-          <Button color="primary" size="sm">
+          <Button color="primary" size="sm" href="#">
             Small Size
           </Button>
-          <Button color="primary" size="md">
+          <Button color="primary" size="md" href="#">
             Regular Size
           </Button>
-          <Button color="primary" size="lg">
+          <Button color="primary" size="lg" href="#">
             Large Size
           </Button>
-          <Button color="primary" size="xl">
+          <Button color="primary" size="xl" href="#">
             ExtraLarge Size
           </Button>
         </p>
         <p>
-          <Button color="primary" size="sm" variant="outlined">
+          <Button color="primary" size="sm" variant="outlined" href="#">
             Small Size
           </Button>
-          <Button color="primary" size="md" variant="outlined">
+          <Button color="primary" size="md" variant="outlined" href="#">
             Regular Size
           </Button>
-          <Button color="primary" size="lg" variant="outlined">
+          <Button color="primary" size="lg" variant="outlined" href="#">
             Large Size
           </Button>
         </p>
@@ -217,12 +235,12 @@ const buttons: iButton[] = [
     render: (
       <>
         <p>
-          <Button color="primary" block="full">
+          <Button color="primary" block="full" href="#">
             Block level button
           </Button>
         </p>
         <p>
-          <Button color="secondary" block="full">
+          <Button color="secondary" block="full" href="#">
             Block level button
           </Button>
         </p>
