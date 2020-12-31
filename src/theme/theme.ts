@@ -5,9 +5,8 @@ import createBreakpoints from './createBreakpoints'
 const theme: Theme = {
   breakpoints: createBreakpoints(),
   palette: {
-    background: {
-      paper: '#fff',
-      default: '#212529'
+    default: {
+      paper: '#fff'
     },
     primary: {
       main: '#00c7ff',
@@ -53,8 +52,8 @@ const theme: Theme = {
     },
     dark: {
       main: '#343a40',
-      light: '#22272A',
-      dark: '#22272A',
+      light: '#464e56',
+      dark: '#464e56',
       contrastText: '#fff'
     },
     text: {

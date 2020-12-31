@@ -2,9 +2,8 @@ import '@emotion/react'
 
 import { Breakpoints } from '../theme/createBreakpoints'
 
-interface IBackground {
+interface IDefault {
   paper: string
-  default: string
 }
 
 interface IPalette {
@@ -26,7 +25,7 @@ declare module '@emotion/react' {
   export interface Theme {
     breakpoints: Breakpoints
     palette: {
-      background: IBackground
+      default: IDefault
       primary: IPalette
       secondary: IPalette
       info: IPalette

@@ -44,27 +44,34 @@ const ButtonSizesStyles = (isLink = false) => {
 
 const generateColors = (
   theme: Theme,
-  type: 'primary' | 'secondary' | 'info' | 'success' | 'warning' | 'danger' | 'light' | 'dark',
+  color: 'primary' | 'secondary' | 'info' | 'success' | 'warning' | 'danger' | 'light' | 'dark',
   isLink = false,
   isOutline = false
 ) => css`
   ${!isLink
-    ? `color: ${!isOutline ? theme.palette[type].contrastText : theme.palette[type].main};`
+    ? `color: ${!isOutline ? theme.palette[color].contrastText : theme.palette[color].main};`
     : ''}
-  background-color: ${!isOutline ? theme.palette[type].main : 'transparent'};
-  border-color: ${theme.palette[type].main};
+  background-color: ${!isOutline ? theme.palette[color].main : 'transparent'};
+  border-color: ${theme.palette[color].main};
 
   &:hover {
-    background-color: ${theme.palette[type].dark};
-    border-color: ${theme.palette[type].dark};
-    color: #fff;
+    background-color: ${theme.palette[color].dark};
+    border-color: ${theme.palette[color].dark};
+    color: ${theme.palette.default.paper};
+
+    ${isLink &&
+    `
+      a {
+        color: ${theme.palette.default.paper};
+      }
+    `}
   }
 
   a {
-    color: ${!isOutline ? theme.palette[type].contrastText : theme.palette[type].main};
+    color: ${!isOutline ? theme.palette[color].contrastText : theme.palette[color].main};
 
     &:hover {
-      color: #fff;
+      color: ${theme.palette.default.paper};
     }
   }
 `

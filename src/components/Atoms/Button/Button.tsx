@@ -35,12 +35,22 @@ const Button: FC<iProps> = props => {
     ...btnProps
   } = props
   const theme = useDefaultTheme()
+  const data = [size, variant, color, block]
+  let buttonText: any = children
+
+  if (href) {
+    data.push('link')
+  }
+
+  if (isLoading || disabled) {
+    data.push('disabled')
+  }
+
   const classNames = classNamesGenerator({
     cpn: 'Button',
     ccn: COMPONENT_CLASS_NAME,
-    data: [size, variant, color, block, href ? 'link' : '', isLoading || disabled ? 'disabled' : '']
+    data
   })
-  let buttonText: any = children
 
   if (isLoading) {
     buttonText = (
