@@ -540,8 +540,30 @@ const buttons: iButton[] = [
       </>
     ),
     code: `
-    <Button color="primary" block="full">Block level button</Button>
-    <Button color="secondary" block="full">Block level button</Button>
+    <Button color="primary" loadingText="Creating" isLoading>
+      Create
+    </Button>
+    <Button color="secondary" loadingText="Creating" isLoading>
+      Create
+    </Button>
+    <Button color="info" loadingText="Creating" isLoading>
+      Create
+    </Button>
+    <Button color="success" loadingText="Creating" isLoading>
+      Create
+    </Button>
+    <Button color="warning" loadingText="Creating" isLoading>
+      Create
+    </Button>
+    <Button color="danger" loadingText="Creating" isLoading>
+      Create
+    </Button>
+    <Button color="dark" loadingText="Creating" isLoading>
+      Create
+    </Button>
+    <Button color="light" loadingText="Creating" isLoading>
+      Create
+    </Button>
     `
   },
   {
@@ -606,8 +628,30 @@ const buttons: iButton[] = [
       </>
     ),
     code: `
-    <Button color="primary" block="full">Block level button</Button>
-    <Button color="secondary" block="full">Block level button</Button>
+    <Button color="primary" href="#" loadingText="Creating" isLoading>
+      Create
+    </Button>
+    <Button color="secondary" href="#" loadingText="Creating" isLoading>
+      Create
+    </Button>
+    <Button color="info" href="#" loadingText="Creating" isLoading>
+      Create
+    </Button>
+    <Button color="success" href="#" loadingText="Creating" isLoading>
+      Create
+    </Button>
+    <Button color="warning" href="#" loadingText="Creating" isLoading>
+      Create
+    </Button>
+    <Button color="danger" href="#" loadingText="Creating" isLoading>
+      Create
+    </Button>
+    <Button color="dark" href="#" loadingText="Creating" isLoading>
+      Create
+    </Button>
+    <Button color="light" href="#" loadingText="Creating" isLoading>
+      Create
+    </Button>
     `
   }
 ]
