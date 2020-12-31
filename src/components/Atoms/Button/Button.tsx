@@ -2,6 +2,7 @@
 import React, { FC, ComponentPropsWithoutRef } from 'react'
 import { classNamesGenerator } from '@contentpi/utils'
 import { useDefaultTheme } from '@theme'
+import Spinner from '../Spinner'
 import { Sizes, Variants, Colors, Block } from './types'
 import { ButtonBase, LinkButtonBase, COMPONENT_CLASS_NAME } from './Button.styled'
 
@@ -11,6 +12,11 @@ interface iProps extends ComponentPropsWithoutRef<'button'> {
   color?: Colors
   block?: Block
   href?: string
+  as?: string
+  disabled?: boolean
+  isLoading?: boolean
+  loadingText?: string
+  Link?: any
 }
 
 const Button: FC<iProps> = props => {
@@ -21,7 +27,11 @@ const Button: FC<iProps> = props => {
     color = 'light',
     block = '',
     href = undefined,
+    as = undefined,
     disabled = undefined,
+    isLoading = undefined,
+    loadingText = undefined,
+    Link = undefined,
     ...btnProps
   } = props
   const theme = useDefaultTheme()
@@ -30,22 +40,47 @@ const Button: FC<iProps> = props => {
     ccn: COMPONENT_CLASS_NAME,
     data: [size, variant, color, block, href ? 'link' : '', disabled ? 'disabled' : '']
   })
+  let buttonText: any = children
+
+  if (isLoading) {
+    buttonText = (
+      <>
+        <Spinner spinner="rolling" style={{ width: '18px' }} /> &nbsp;&nbsp;&nbsp; {loadingText}
+      </>
+    )
+  }
 
   if (href) {
-    const linkBtnProps = {
-      href,
-      theme
+    const linkBtnProps: any = {
+      href
+    }
+
+    if (as) {
+      linkBtnProps.as = as
+    }
+
+    if (Link) {
+      return (
+        <LinkButtonBase
+          className={classNames}
+          {...linkBtnProps}
+          disabled={isLoading || disabled}
+          theme={theme}
+        >
+          <Link {...linkBtnProps}>{buttonText}</Link>
+        </LinkButtonBase>
+      )
     }
 
     return (
-      <LinkButtonBase className={classNames} {...linkBtnProps}>
-        {children}
+      <LinkButtonBase className={classNames} {...linkBtnProps} theme={theme}>
+        <a {...linkBtnProps}>{buttonText}</a>
       </LinkButtonBase>
     )
   }
 
   return (
-    <ButtonBase className={classNames} {...btnProps} theme={theme}>
+    <ButtonBase className={classNames} {...btnProps} theme={theme} disabled={isLoading || disabled}>
       {children}
     </ButtonBase>
   )
