@@ -38,7 +38,7 @@ const Button: FC<iProps> = props => {
   const classNames = classNamesGenerator({
     cpn: 'Button',
     ccn: COMPONENT_CLASS_NAME,
-    data: [size, variant, color, block, href ? 'link' : '', disabled ? 'disabled' : '']
+    data: [size, variant, color, block, href ? 'link' : '', isLoading || disabled ? 'disabled' : '']
   })
   let buttonText: any = children
 
@@ -73,7 +73,12 @@ const Button: FC<iProps> = props => {
     }
 
     return (
-      <LinkButtonBase className={classNames} {...linkBtnProps} theme={theme}>
+      <LinkButtonBase
+        className={classNames}
+        {...linkBtnProps}
+        theme={theme}
+        disabled={isLoading || disabled}
+      >
         <a {...linkBtnProps}>{buttonText}</a>
       </LinkButtonBase>
     )
@@ -81,7 +86,7 @@ const Button: FC<iProps> = props => {
 
   return (
     <ButtonBase className={classNames} {...btnProps} theme={theme} disabled={isLoading || disabled}>
-      {children}
+      {buttonText}
     </ButtonBase>
   )
 }

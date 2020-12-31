@@ -478,6 +478,137 @@ const buttons: iButton[] = [
     <Button color="primary" block="full">Block level button</Button>
     <Button color="secondary" block="full">Block level button</Button>
     `
+  },
+  {
+    title: 'Button with Loading Text (<button>)',
+    prop: 'isLoading',
+    description: 'true',
+    render: (
+      <>
+        <p>
+          <Button color="primary" loadingText="Creating" isLoading>
+            Create
+          </Button>
+          <Button color="secondary" loadingText="Creating" isLoading>
+            Create
+          </Button>
+          <Button color="info" loadingText="Creating" isLoading>
+            Create
+          </Button>
+          <Button color="success" loadingText="Creating" isLoading>
+            Create
+          </Button>
+          <Button color="warning" loadingText="Creating" isLoading>
+            Create
+          </Button>
+          <Button color="danger" loadingText="Creating" isLoading>
+            Create
+          </Button>
+          <Button color="dark" loadingText="Creating" isLoading>
+            Create
+          </Button>
+          <Button color="light" loadingText="Creating" isLoading>
+            Create
+          </Button>
+        </p>
+        <p>
+          <Button color="primary" loadingText="Creating">
+            Create
+          </Button>
+          <Button color="secondary" loadingText="Creating">
+            Create
+          </Button>
+          <Button color="info" loadingText="Creating">
+            Create
+          </Button>
+          <Button color="success" loadingText="Creating">
+            Create
+          </Button>
+          <Button color="warning" loadingText="Creating">
+            Create
+          </Button>
+          <Button color="danger" loadingText="Creating">
+            Create
+          </Button>
+          <Button color="dark" loadingText="Creating">
+            Create
+          </Button>
+          <Button color="light" loadingText="Creating">
+            Create
+          </Button>
+        </p>
+      </>
+    ),
+    code: `
+    <Button color="primary" block="full">Block level button</Button>
+    <Button color="secondary" block="full">Block level button</Button>
+    `
+  },
+  {
+    title: 'Button with Loading Text (<a>)',
+    prop: 'isLoading',
+    description: 'true',
+    render: (
+      <>
+        <p>
+          <Button color="primary" href="#" loadingText="Creating" isLoading>
+            Create
+          </Button>
+          <Button color="secondary" href="#" loadingText="Creating" isLoading>
+            Create
+          </Button>
+          <Button color="info" href="#" loadingText="Creating" isLoading>
+            Create
+          </Button>
+          <Button color="success" href="#" loadingText="Creating" isLoading>
+            Create
+          </Button>
+          <Button color="warning" href="#" loadingText="Creating" isLoading>
+            Create
+          </Button>
+          <Button color="danger" href="#" loadingText="Creating" isLoading>
+            Create
+          </Button>
+          <Button color="dark" href="#" loadingText="Creating" isLoading>
+            Create
+          </Button>
+          <Button color="light" href="#" loadingText="Creating" isLoading>
+            Create
+          </Button>
+        </p>
+        <br />
+        <p>
+          <Button color="primary" href="#" loadingText="Creating">
+            Create
+          </Button>
+          <Button color="secondary" href="#" loadingText="Creating">
+            Create
+          </Button>
+          <Button color="info" href="#" loadingText="Creating">
+            Create
+          </Button>
+          <Button color="success" href="#" loadingText="Creating">
+            Create
+          </Button>
+          <Button color="warning" href="#" loadingText="Creating">
+            Create
+          </Button>
+          <Button color="danger" href="#" loadingText="Creating">
+            Create
+          </Button>
+          <Button color="dark" href="#" loadingText="Creating">
+            Create
+          </Button>
+          <Button color="light" href="#" loadingText="Creating">
+            Create
+          </Button>
+        </p>
+      </>
+    ),
+    code: `
+    <Button color="primary" block="full">Block level button</Button>
+    <Button color="secondary" block="full">Block level button</Button>
+    `
   }
 ]
 

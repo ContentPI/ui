@@ -219,8 +219,8 @@ export const ButtonBase = styled.button`
 
   img {
     position: absolute;
-    top: 9px;
-    left: 6px;
+    top: 8px;
+    left: 8px;
   }
 
   ${ButtonStyle}
@@ -236,8 +236,8 @@ export const LinkButtonBase = styled.span<any>`
 
     img {
       position: absolute;
-      top: 9px;
-      left: 6px;
+      top: 2px;
+      left: -10px;
     }
   }
 
