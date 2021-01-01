@@ -1,0 +1,12 @@
+export type Colors =
+  | 'primary'
+  | 'secondary'
+  | 'info'
+  | 'success'
+  | 'warning'
+  | 'danger'
+  | 'light'
+  | 'dark'
+export type Sizes = 'sm' | 'md' | 'lg' | 'xl' | 'full'
+export type Variants = 'contained' | 'outlined' | 'text'
+export type Block = 'full'

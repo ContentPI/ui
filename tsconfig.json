@@ -21,6 +21,8 @@
     }
   },
   "files": [
+    "src/components/Atoms/Button",
+    "src/components/Atoms/Spinner",
     "src/Accordion/index.tsx",
     "src/Alert/index.tsx",
     "src/Badge/index.tsx",

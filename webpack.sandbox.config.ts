@@ -22,6 +22,7 @@ module.exports = {
               path.resolve(__dirname, './src/Menu/icons'),
               path.resolve(__dirname, './src/Modal/icons'),
               path.resolve(__dirname, './src/Spinner/loaders'),
+              path.resolve(__dirname, './src/components/Atoms/Spinner/loaders'),
               path.resolve(__dirname, './src/Steps')
             ],
             use: 'svg-url-loader'

@@ -5,20 +5,19 @@ import createBreakpoints from './createBreakpoints'
 const theme: Theme = {
   breakpoints: createBreakpoints(),
   palette: {
-    background: {
-      paper: '#fff',
-      default: '#212529'
+    default: {
+      paper: '#fff'
     },
     primary: {
-      main: '#00bde5',
-      light: '#65f0ff',
-      dark: '#008db3',
+      main: '#00c7ff',
+      light: '#00b5e8',
+      dark: '#00b5e8',
       contrastText: '#fff'
     },
     secondary: {
-      main: '#121212',
-      light: '#161616',
-      dark: '#007bff',
+      main: '#6c757d',
+      light: '#606870',
+      dark: '#606870',
       contrastText: '#fff'
     },
     info: {
@@ -47,14 +46,14 @@ const theme: Theme = {
     },
     light: {
       main: '#E5E9F2',
-      light: '#E5E9F2',
-      dark: '#E5E9F2',
-      contrastText: '#fff'
+      light: '#d5d9e2',
+      dark: '#d5d9e2',
+      contrastText: '#282828'
     },
     dark: {
-      main: '#22272A',
-      light: '#22272A',
-      dark: '#22272A',
+      main: '#343a40',
+      light: '#464e56',
+      dark: '#464e56',
       contrastText: '#fff'
     },
     text: {
