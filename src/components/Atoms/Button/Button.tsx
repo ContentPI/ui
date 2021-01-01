@@ -1,7 +1,8 @@
 // Dependencies
 import React, { FC, ComponentPropsWithoutRef } from 'react'
 import { classNamesGenerator } from '@contentpi/utils'
-import { useDefaultTheme } from '@theme'
+import { Global } from '@emotion/react'
+import { useDefaultTheme, GlobalStyles } from '@theme'
 import Spinner from '../Spinner'
 import { Sizes, Variants, Colors, Block } from './types'
 import { ButtonBase, LinkButtonBase, COMPONENT_CLASS_NAME } from './Button.styled'
@@ -95,9 +96,18 @@ const Button: FC<iProps> = props => {
   }
 
   return (
-    <ButtonBase className={classNames} {...btnProps} theme={theme} disabled={isLoading || disabled}>
-      {buttonText}
-    </ButtonBase>
+    <>
+      <Global styles={GlobalStyles} />
+
+      <ButtonBase
+        className={classNames}
+        {...btnProps}
+        theme={theme}
+        disabled={isLoading || disabled}
+      >
+        {buttonText}
+      </ButtonBase>
+    </>
   )
 }
 
