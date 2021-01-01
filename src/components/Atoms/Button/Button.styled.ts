@@ -1,6 +1,8 @@
 // Dependencies
 import styled from '@emotion/styled'
 import { css, Theme } from '@emotion/react'
+
+// Theme
 import { defaultTheme } from '@theme'
 
 export const COMPONENT_CLASS_NAME = 'btn'
