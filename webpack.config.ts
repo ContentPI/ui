@@ -44,6 +44,10 @@ module.exports = {
   resolve: {
     extensions: ['*', '.ts', '.tsx', '.js', '.jsx'],
     alias: {
+      '@atoms': path.resolve(__dirname, 'src/components/Atoms/index.ts'),
+      '@molecules': path.resolve(__dirname, 'src/components/Molecules/index.ts'),
+      '@organisms': path.resolve(__dirname, 'src/components/Organisms/index.ts'),
+      '@theme': path.resolve(__dirname, 'src/theme/index.ts'),
       react: path.resolve(__dirname, './node_modules/react'),
       'react-dom': path.resolve(__dirname, './node_modules/react-dom')
     }
