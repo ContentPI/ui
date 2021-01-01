@@ -26,6 +26,7 @@
     "src/components/Atoms/Button/DarkButton.tsx",
     "src/components/Atoms/Button/InfoButton.tsx",
     "src/components/Atoms/Button/LightButton.tsx",
+    "src/components/Atoms/Button/LinkButton.tsx",
     "src/components/Atoms/Button/PrimaryButton.tsx",
     "src/components/Atoms/Button/SuccessButton.tsx",
     "src/components/Atoms/Button/WarningButton.tsx",
